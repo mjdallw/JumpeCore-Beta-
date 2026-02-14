@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JumpCore | الصفحة الرسمية</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: clamp(40px, 8vw, 80px) 20px;
+        }
+
+        header h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: clamp(16px, 3.5vw, 20px);
+            max-width: 800px;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            padding: clamp(20px, 6vw, 60px) 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: clamp(22px, 4vw, 32px);
+            margin-bottom: 25px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .images img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .images img:hover {
+            transform: scale(1.05);
+        }
+
+        .download-btn {
+            background: #00ff99;
+            color: #003322;
+            font-size: clamp(18px, 4vw, 22px);
+            padding: 16px clamp(28px, 8vw, 50px);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .download-btn:hover {
+            background: #00cc77;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            font-size: clamp(13px, 3vw, 14px);
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔥 JumpCore 🔥</h1>
+    <p>
+        لعبة باركور تعتمد على السرعة والدقة<br>
+        اقفز بين المنصات، تجنب السقوط، وحقق أفضل وقت<br>
+        مراحل قصيرة بتحديات متزايدة وتجربة لعب خفيفة وسريعة
+    </p>
+</header>
+
+<div class="container">
+    <h2>📸 صور من اللعبة</h2>
+
+    <div class="images">
+        <img src="image1.jpg" alt="صورة من اللعبة">
+        <img src="image2.jpg" alt="صورة من اللعبة">
+        <img src="image3.jpg" alt="صورة من اللعبة">
+    </div>
+
+    <h2>⬇️ تحميل اللعبة</h2>
+    <p>متوفرة الآن لنظام Windows</p>
+
+    <button class="download-btn" onclick="downloadGame()">
+        تحميل اللعبة للويندوز
+    </button>
+</div>
+
+<footer>
+    © 2026 جميع الحقوق محفوظة | ilghy7  
+    <br>قريباً على الجوال 📱
+</footer>
+
+<script>
+    function downloadGame() {
+        const downloadLink = document.createElement("a");
+        downloadLink.href = "https://www.mediafire.com/file/rbupbywehlitgfs/Menu.exe/file";
+        downloadLink.download = "GAME1.exe";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
+</script>
+
+</body>
+</html>
