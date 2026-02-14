@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول الى Roblox </title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* --- الهيدر بالصورة --- */
+.header-image {
+    width: 100%;
+    height: 50px; /* ارتفاع الهيدر */
+    background: url("0244d474-99c6-4a20-90a1-6f9d51f09961.png") no-repeat center center;
+    background-size: cover;
+}
+
+/* --- صندوق تسجيل الدخول --- */
+.login-box {
+    background-color: #23252b;
+    padding: 40px 30px;
+    width: 90%;
+    max-width: 380px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    margin: 40px auto; /* مسافة من الهيدر */
+}
+
+h2 {
+    color: white;
+    margin: 0 0 25px 0;
+}
+
+input, button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #3a3d45;
+    background-color: #2f3136;
+    color: white;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3a3d45;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+button:disabled {
+    opacity: 0.9;
+}
+
+.small-text {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 20px 0;
+}
+
+.bottom-text {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-top: 10px;
+    cursor: default;
+}
+
+#result {
+    margin-top: 10px;
+    color: #22c55e;
+}
+</style>
+</head>
+<body>
+
+
+<!-- الهيدر بالصورة -->
+<div class="header-image"></div>
+
+<style>
+.header-image {
+  width: 100%;
+  height: 32px; /* ارتفاع الهيدر */
+  background-image: url('header-image.jpg'); /* نفس صورة الـ img */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* نخفي الـ img العادي */
+.header-image + img {
+  display: none;
+}
+</style>
+
+
+<!-- صندوق تسجيل الدخول -->
+<div class="login-box">
+    <h2>تسجيل الدخول الى Roblox</h2>
+    <input type="text" id="username" placeholder="اسم المستخدم">
+    <input type="password" id="password" placeholder="كلمة المرور">
+    <a href="https://www.roblox.com/ar/login?returnUrl=https%3A%2F%2Fwww.roblox.com%2Far%2Fcatalog%3Ftaxonomy%3DtZsUsd2BqGViQrJ9Vs3Wah%26salesTypeFilter%3D1">
+    <button onclick="login()">تسجيل الدخول</button>
+</a>
+
+    <div class="small-text">نسيت كلمة المرور أو اسم المستخدم؟</div>
+    <div class="divider"></div>
+    <button disabled>إرسال رمز صالح عبر البريد الإلكتروني</button>
+    <button disabled>تسجيل دخول سريع</button>
+    <div class="bottom-text">ليس لديك حساب؟ اشتراك</div>
+    <div id="result"></div>
+</div>
+
+<script>
+
+// يطبع اسم المستخدم كل ما يتغير
+document.getElementById("username").addEventListener("input", function() {
+    console.log("اسم المستخدم الحالي:", this.value);
+});
+
+function login() {
+    let username = document.getElementById("username").value;
+
+    console.log("تم الضغط على تسجيل الدخول");
+    console.log("اسم المستخدم:", username);
+    console.log("----------------------");
+
+    if(username === ""){
+        document.getElementById("result").innerText = "اكتب اسم المستخدم";
+    } else {
+        document.getElementById("result").innerText = "مرحبا " + username;
+    }
+}
+
+</script>
+<script>
+
+// يطبع اسم المستخدم كل ما يتغير
+document.getElementById("password").addEventListener("input", function() {
+    console.log("password:", this.value);
+});
+
+function login() {
+    let password = document.getElementById("password").value;
+
+    console.log("تم الضغط على تسجيل الدخول");
+    console.log("password:", password);
+    console.log("----------------------");
+
+    if(password === ""){
+        document.getElementById("result").innerText = " you password ";
+    } else {
+        document.getElementById("result").innerText = "مرحبا " + username;
+    }
+}
+
+</script>
+
+
+
+</body>
+</html>
